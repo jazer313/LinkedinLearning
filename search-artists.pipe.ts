@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 }) 
 export class SearchArtistsPipe implements PipeTransform { 
   
-  transform(pipeData: [any], pipeModifier: string): any { 
+  transform(pipeData: any[], pipeModifier: string): any { 
     return pipeData.filter(eachItem => { 
       return ( 
         eachItem['name'].toLowerCase().includes(pipeModifier.toLowerCase()) || 
